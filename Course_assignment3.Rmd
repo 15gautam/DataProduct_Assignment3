@@ -1,0 +1,26 @@
+---
+title: "Week 3 Assignment"
+date: "June 2nd 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#  A plot created with Plotly  
+## Including Plots
+```{r myplot}
+library(plotly)
+fig <- plot_ly(economics,x= ~date,y= ~unemploy,z= ~pop, type = "mesh3d" )
+    #colorbar(fig,len=.5)
+fig
+fig2<-plot_ly(economics, x =~date, y= ~pop ,type = "histogram2d",  color = ~psavert>12.8, colors = c("yellow", "green"))
+fig2
+```
+
+
+
+
+
